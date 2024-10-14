@@ -1,0 +1,17 @@
+Key Modifications:
+
+Use %matplotlib tk magic command to enable tkinter event loops within Jupyter Notebook.
+Run the tkinter event loop in a separate thread to prevent Jupyter from freezing, as Jupyter expects to regain control after each cell execution.
+
+
+Key Changes:
+threading.Thread(target=run_tkinter_in_thread).start(): This runs the tkinter event loop in a separate thread, allowing Jupyter to stay responsive.
+All the tkinter GUI code is wrapped inside the function run_tkinter_in_thread(), which is executed in a thread.
+
+
+How to Run in Jupyter Notebook:
+
+Open Jupyter Notebook.
+Run the entire code in a single cell.
+The GUI window should pop up separately, allowing you to start and stop voice recording.
+The voice recording will still save to output.wav in the current working directory.
