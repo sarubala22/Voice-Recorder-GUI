@@ -1,0 +1,18 @@
+AS PYTHON FILE
+How It Works:
+
+Recording Setup:
+The sounddevice library records audio using the system's microphone at the specified sample rate (fs) and for a specified duration.
+The audio is saved in a file named output.wav using wavio.
+
+Tkinter GUI:
+The GUI allows you to start and stop recording using buttons.
+You can adjust the recording duration using a slider.
+
+Multi-threading:
+To ensure the GUI doesn't freeze while recording, a new thread is created to handle the recording process.
+
+How to Run:
+Make sure you have the required libraries installed (sounddevice, wavio, and tkinter comes pre-installed with Python).
+Run the script, and you'll see a simple window where you can start and stop the voice recording.
+The recording will be saved as output.wav in the same directory as your script.
